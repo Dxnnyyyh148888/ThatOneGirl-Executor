@@ -76,6 +76,7 @@ local function createButton(name, text, position, callback)
     button.Text = text
     button.BackgroundColor3 = Color3.fromRGB(80, 120, 160)
     button.BorderSizePixel = 0
+    button.Font = Enum.Font.SourceSans
     button.TextColor3 = Color3.fromRGB(255, 255, 255)
     button.TextSize = 14
     button.TextXAlignment = Enum.TextXAlignment.Left
