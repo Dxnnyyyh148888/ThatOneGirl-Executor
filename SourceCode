@@ -79,7 +79,7 @@ local function createButton(name, text, position, callback)
     button.BorderSizePixel = 0
     button.Font = Enum.Font.SourceSans
     button.TextColor3 = Color3.fromRGB(255, 255, 255)
-    button.TextSize = 14
+    button.TextScaled = true
     button.TextXAlignment = Enum.TextXAlignment.Left
 
     button.MouseEnter:Connect(function()
@@ -121,7 +121,7 @@ end)
 closeButton.Size = UDim2.new(0.1, 0, 0.15)
 closeButton.TextScaled = true
 closeButton.Font = Enum.Font.SourceSans
-closeButton.Position = UDim2.new(0.5,0,0.2)
+closeButton.Position = UDim2.new(0.5,0,0.4)
 closeButton.BackgroundColor3 = Color3.fromRGB(45,45,50)
 closeButton.TextXAlignment = Enum.TextXAlignment.Center
 local isPanelOpen = false
@@ -160,8 +160,6 @@ UserInputService.InputChanged:Connect(function(input)
     end
 end)
 local cone = Instance.new("UICorner")
-cone.Parent = copyButton
-local cone = Instance.new("UICorner")
 cone.Parent = pasteButton
 local cone = Instance.new("UICorner")
 cone.Parent = clearButton
@@ -173,6 +171,15 @@ options.Text = "&"
 options.Parent = frame
 options.BorderSizePixel = 0
 options.TextScaled = true
+local info = Instance.new("TextButton")
+info.Parent = frame
+info.Size = UDim2.new(0.1,0,0.2)
+info.Position = UDim2.new(0.5,0,0.2)
+info.BorderSizePixel = 0
+info.Text = "i"
+info.Font = Enum.Font.Code
+info.TextScaled = true
+info.TextColor3 = Color3.fromRGB(45,45,50)
 options.Font = Enum.Font.SourceSans
 opf.Size = UDim2.new(0.4,0,0.4)
 opf.Position = UDim2.new(0.3,0,0.6)
