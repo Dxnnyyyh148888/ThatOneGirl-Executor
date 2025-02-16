@@ -4,7 +4,8 @@ local TweenService = game:GetService("TweenService")
 
 local gui = Instance.new("ScreenGui")
 gui.Parent = game:GetService("CoreGui")
-
+local options = Instance.new("TextButton")
+local opf = Instance.new("Frame")
 local frame = Instance.new("Frame")
 frame.Parent = gui
 frame.Size = UDim2.new(1.25, 0, 0.4, 0)
@@ -53,7 +54,7 @@ local textBox = Instance.new("TextBox")
 textBox.Parent = frame
 textBox.Size = UDim2.new(0.5, 0, 1, 0)
 textBox.Position = UDim2.new(0, 0, 0, 0)
-textBox.PlaceholderText = "Local . . ."
+textBox.PlaceholderText = "Your Code Here! made by Dxnny(T.me/Dxnnylol)"
 textBox.Text = ""
 textBox.Font = Enum.Font.Code
 textBox.TextSize = 12
@@ -114,7 +115,7 @@ local pasteButton = createButton("Paste", " Paste Code", UDim2.new(0.6, 0, 0.75,
 end)
 
 local closeButton = createButton("Close", "X", UDim2.new(0.5, 0, 1, -20), function()
-    frame:Destroy()
+    gui:Destroy()
     toggleButton:Destroy()
 end)
 closeButton.Size = UDim2.new(0.1, 0, 0.15)
@@ -156,8 +157,6 @@ UserInputService.InputChanged:Connect(function(input)
     end
 end)
 local cone = Instance.new("UICorner")
-cone.Parent = executeButton
-local cone = Instance.new("UICorner")
 cone.Parent = copyButton
 local cone = Instance.new("UICorner")
 cone.Parent = pasteButton
@@ -165,3 +164,75 @@ local cone = Instance.new("UICorner")
 cone.Parent = clearButton
 local cone = Instance.new("UICorner")
 cone.Parent = closeButton
+options.Size = UDim2.new(0.1,0,0.2)
+options.Position = UDim2.new(0.5,0,0)
+options.BackgroundColor3 = Color3.fromRGB(45,45,50)
+options.TextColor3 = Color3.fromRGB(255,255,255)
+options.Text = "&"
+options.Parent = frame
+options.BorderSizePixel = 0
+options.TextScaled = true
+options.Font = Enum.Font.SourceSans
+opf.Size = UDim2.new(0.4,0,0.4)
+opf.Position = UDim2.new(0.3,0,0.6)
+opf.BackgroundColor3 = Color3.fromRGB(40,40,40)
+opf.Parent = gui
+opf.Visible = false
+options.MouseButton1Click:Connect(function()
+if opf.Visible == false then
+    opf.Visible = true
+    opf.Size = UDim2.new(0.4,0,0)
+    local ios = game:GetService("TweenService")
+    local ggoal = UDim2.new(0.4,0,0.4)
+    local ifa = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
+    local koak = ios:Create(opf,ifa,{Size = ggoal})
+    koak:Play()
+  else
+    opf.Visible = false
+  end
+end)
+local gm = Instance.new("TextButton")
+gm.Parent = opf
+gm.Size = UDim2.new(0.3,0,0.3)
+gm.Position = UDim2.new(0.02,0,0.68)
+gm.BorderSizePixel = 0
+gm.BackgroundColor3 = Color3.fromRGB(50,50,55)
+gm.Text = "GuiMaker (GhostHub)"
+gm.TextScaled = true
+gm.Font = Enum.Font.SourceSans
+gm.TextColor3 = Color3.fromRGB(255,255,255)
+gm.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://pastefy.app/S7xNJSXX/raw'))()execute("Script8")
+end)
+local th = Instance.new("TextButton")
+th.Size = UDim2.new(0.3,0,0.3)
+th.Parent = opf
+th.Position = UDim2.new(0.36,0,0.68)
+th.BackgroundColor3 = Color3.fromRGB(50,50,55)
+th.Text = "DarkDex (ActiveAPI)"
+th.TextScaled = true
+th.Font = Enum.Font.SourceSans
+th.BorderSizePixel = 0
+th.TextColor3 = Color3.fromRGB(255,255,255)
+th.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Artifacttx/YumeHub/refs/heads/main/Universal/DarkDex_Mobile", true))()
+end)
+local uc = Instance.new("TextButton")
+uc.Parent = opf
+uc.Size = UDim2.new(0.3,0,0.3)
+uc.Position = UDim2.new(0.68,0,0.68)
+uc.BackgroundColor3 = Color3.fromRGB(50,50,55)
+uc.Text = "UNCchecker (Executor)"
+uc.TextScaled = true
+uc.TextColor3 = Color3.fromRGB(255,255,255)
+uc.Font = Enum.Font.SourceSans
+uc.BorderSizePixel = 0
+uc.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://roguedz.xyz/vulnerability-checker-gui.lua"))()
+end)
+local scrl = Instance.new("ScrollingFrame")
+scrl.Parent = opf
+scrl.Size = UDim2.new(0.97,0,0.6)
+scrl.Position = UDim2.new(0.015,0,0.02)
+scrl.BorderSizePixel = 0
+scrl.BackgroundColor3 = Color3.fromRGB(50,50,55)
