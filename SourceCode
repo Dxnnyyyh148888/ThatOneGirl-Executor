@@ -245,3 +245,37 @@ scrl.Size = UDim2.new(0.97,0,0.6)
 scrl.Position = UDim2.new(0.015,0,0.02)
 scrl.BorderSizePixel = 0
 scrl.BackgroundColor3 = Color3.fromRGB(50,50,55)
+local title = Instance.new("TextLabel")
+title.Parent = scrl
+title.Size = UDim2.new(1, 0, 0.05, 0)
+title.Position = UDim2.new(0, 0, 0, 0)
+title.Text = "Paste and select"
+title.Font = Enum.Font.SourceSansBold
+title.TextScaled = true
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1
+title.TextXAlignment = Enum.TextXAlignment.Center
+
+local function createPathButton(name, text, position, path)
+    local button = Instance.new("TextButton")
+    button.Parent = scrl
+    button.Size = UDim2.new(0.45, 0, 0.05, 0)
+    button.Position = position
+    button.Text = text
+    button.BackgroundColor3 = Color3.fromRGB(80, 120, 160)
+    button.BorderSizePixel = 0
+    button.Font = Enum.Font.SourceSans
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.TextScaled = true
+
+    button.MouseButton1Click:Connect(function()
+        textBox.Text = textBox.Text .. path
+    end)
+
+    return button
+end
+
+createPathButton("Humanoid", "Humanoid", UDim2.new(0.025, 0, 0.07, 0), "local humanoid = game.Players.LocalPlayer.Character.Humanoid")
+createPathButton("HumanoidRootPart", "HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidroorpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
+createPathButton("LocalPlayer", "LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player = game.Players.LocalPlayer")
+createPathButton("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
