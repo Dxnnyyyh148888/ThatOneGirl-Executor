@@ -276,6 +276,6 @@ local function createPathButton(name, text, position, path)
 end
 
 createPathButton("Humanoid", "Humanoid", UDim2.new(0.025, 0, 0.07, 0), "local humanoid = game.Players.LocalPlayer.Character.Humanoid")
-createPathButton("HumanoidRootPart", "HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidroorpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
+createPathButton("HumanoidRootPart", "HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
 createPathButton("LocalPlayer", "LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player = game.Players.LocalPlayer")
 createPathButton("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
