@@ -118,10 +118,10 @@ local closeButton = createButton("Close", "X", UDim2.new(0.5, 0, 1, -20), functi
     gui:Destroy()
     toggleButton:Destroy()
 end)
-closeButton.Size = UDim2.new(0.1, 0, 0.15)
+closeButton.Size = UDim2.new(0.1, 0, 0.2)
 closeButton.TextScaled = true
 closeButton.Font = Enum.Font.SourceSans
-closeButton.Position = UDim2.new(0.5,0,0.4)
+closeButton.Position = UDim2.new(0.5,0,0.5)
 closeButton.BackgroundColor3 = Color3.fromRGB(45,45,50)
 closeButton.TextXAlignment = Enum.TextXAlignment.Center
 local isPanelOpen = false
@@ -173,13 +173,14 @@ options.BorderSizePixel = 0
 options.TextScaled = true
 local info = Instance.new("TextButton")
 info.Parent = frame
-info.Size = UDim2.new(0.1,0,0.2)
+info.Size = UDim2.new(0.1,0,0.25)
 info.Position = UDim2.new(0.5,0,0.2)
 info.BorderSizePixel = 0
 info.Text = "i"
 info.Font = Enum.Font.Code
 info.TextScaled = true
-info.TextColor3 = Color3.fromRGB(45,45,50)
+info.TextColor3 = Color3.fromRGB(255,255,255)
+info.BackgroundColor3 = Color3.fromRGB(45,45,50)
 options.Font = Enum.Font.SourceSans
 opf.Size = UDim2.new(0.4,0,0.4)
 opf.Position = UDim2.new(0.3,0,0.6)
