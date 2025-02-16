@@ -125,7 +125,7 @@ local isPanelOpen = false
 local function togglePanel()
     if isPanelOpen then
         TweenService:Create(frame, TweenInfo.new(0.75, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0,0,-1.5)}):Play()
-        TweenService:Create(toggleButton, TweenInfo.new(1.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0.35,0,-0.15)}):Play()
+        TweenService:Create(toggleButton, TweenInfo.new(1.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0.35,0,0)}):Play()
     else
         TweenService:Create(frame, TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Position = UDim2.new(0, 0, 0)}):Play()
         TweenService:Create(toggleButton, TweenInfo.new(1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Position = UDim2.new(0.35,0,0.415)}):Play()
