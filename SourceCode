@@ -119,7 +119,10 @@ local closeButton = createButton("Close", "X", UDim2.new(0.5, 0, 1, -20), functi
     toggleButton:Destroy()
 end)
 closeButton.Size = UDim2.new(0.1, 0, 0.15)
-closeButton.BackgroundColor3 = Color3.fromRGB(150, 50, 50)
+closeButton.TextScaled = true
+closeButton.Font = Enum.Font.SourceSans
+closeButton.Position = UDim2.new(0.5,0,0.2)
+closeButton.BackgroundColor3 = Color3.fromRGB(45,45,50)
 closeButton.TextXAlignment = Enum.TextXAlignment.Center
 local isPanelOpen = false
 local function togglePanel()
@@ -162,8 +165,6 @@ local cone = Instance.new("UICorner")
 cone.Parent = pasteButton
 local cone = Instance.new("UICorner")
 cone.Parent = clearButton
-local cone = Instance.new("UICorner")
-cone.Parent = closeButton
 options.Size = UDim2.new(0.1,0,0.2)
 options.Position = UDim2.new(0.5,0,0)
 options.BackgroundColor3 = Color3.fromRGB(45,45,50)
