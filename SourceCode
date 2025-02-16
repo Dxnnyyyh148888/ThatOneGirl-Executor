@@ -1,0 +1,166 @@
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+
+local gui = Instance.new("ScreenGui")
+gui.Parent = game:GetService("CoreGui")
+
+local frame = Instance.new("Frame")
+frame.Parent = gui
+frame.Size = UDim2.new(1.25, 0, 0.4, 0)
+frame.Position = UDim2.new(-0.5,0,-1.5)
+frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+frame.BorderSizePixel = 0
+local n = Instance.new("Frame")
+n.Parent = frame
+n.BorderSizePixel = 0
+n.Size = UDim2.new(1,0,1)
+n.Position = UDim2.new(0,0,-1)
+n.BackgroundColor3 = Color3.fromRGB(40,40,40)
+local toggleButton = Instance.new("TextButton")
+toggleButton.Parent = gui
+toggleButton.Size = UDim2.new(0,0,0.045)
+toggleButton.Position = UDim2.new(0.5,0,0.2)
+toggleButton.Text = "JoinUs! T.me/Dxnnylol!"
+toggleButton.BackgroundColor3 = Color3.fromRGB(255,255,255)
+toggleButton.BackgroundTransparency = 0.8
+toggleButton.BorderSizePixel = 0
+local corner = Instance.new("UICorner")
+corner.Parent = toggleButton
+corner.CornerRadius = UDim.new(0.7, 0)
+local j = game:GetService("TweenService")
+local hoal = UDim2.new(0.3,0,0.04)
+local info = TweenInfo.new(1,Enum.EasingStyle.Back,Enum.EasingDirection.Out)
+local ki = j:Create(toggleButton,info, {Size = hoal})
+ki:Play()
+local jj = game:GetService("TweenService")
+local goal = UDim2.new(0.35,0,0.2)
+local ifo = TweenInfo.new(1,Enum.EasingStyle.Back,Enum.EasingDirection.Out)
+local kki = jj:Create(toggleButton,ifo, {Position = goal})
+kki:Play()
+wait(2)
+local jje = game:GetService("TweenService")
+local gooal = UDim2.new(0.35, 0,-0.15)
+local ifoo = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
+local kaki = jje:Create(toggleButton,ifoo, {Position = gooal})
+kaki:Play()
+toggleButton.Text = "JoinUs!"
+wait(0.2)
+toggleButton.Text = "Join"
+wait(0.2)
+toggleButton.Text = " "
+local textBox = Instance.new("TextBox")
+textBox.Parent = frame
+textBox.Size = UDim2.new(0.5, 0, 1, 0)
+textBox.Position = UDim2.new(0, 0, 0, 0)
+textBox.PlaceholderText = "Local . . ."
+textBox.Text = ""
+textBox.Font = Enum.Font.Code
+textBox.TextSize = 12
+textBox.BackgroundColor3 = Color3.fromRGB(50, 50, 60)
+textBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+textBox.BorderSizePixel = 0
+textBox.ClearTextOnFocus = false
+textBox.TextWrapped = true
+textBox.TextScaled = false
+textBox.TextYAlignment = Enum.TextYAlignment.Top
+textBox.TextXAlignment = Enum.TextXAlignment.Left
+textBox.MultiLine = true
+textBox.ClipsDescendants = true
+
+local function createButton(name, text, position, callback)
+    local button = Instance.new("TextButton")
+    button.Parent = frame
+    button.Size = UDim2.new(0.5, 0, 0.2, 0)
+    button.Position = position
+    button.Text = text
+    button.BackgroundColor3 = Color3.fromRGB(80, 120, 160)
+    button.BorderSizePixel = 0
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.TextSize = 14
+    button.TextXAlignment = Enum.TextXAlignment.Left
+
+    button.MouseEnter:Connect(function()
+        TweenService:Create(button, TweenInfo.new(0.2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(100, 150, 200)}):Play()
+    end)
+    button.MouseLeave:Connect(function()
+        TweenService:Create(button, TweenInfo.new(0.2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(80, 120, 160)}):Play()
+    end)
+
+    button.MouseButton1Click:Connect(callback)
+    return button
+end
+
+local executeButton = createButton("Execute", " Execute Script", UDim2.new(0.6, 0, 0, 0), function()
+    local success, errorMessage = pcall(function()
+        loadstring(textBox.Text)()
+    end)
+    if not success then
+        warn("Execution Failed: " .. errorMessage)
+    end
+end)
+
+local copyButton = createButton("Copy", " Copy Text", UDim2.new(0.6, 0, 0.25, 0), function()
+    setclipboard(textBox.Text)
+end)
+
+local clearButton = createButton("Clear", " Clear Text", UDim2.new(0.6, 0, 0.5, 0), function()
+    textBox.Text = ""
+end)
+
+local pasteButton = createButton("Paste", " Paste Code", UDim2.new(0.6, 0, 0.75, 0), function()
+    textBox.Text = tostring(getclipboard())
+end)
+
+local closeButton = createButton("Close", "X", UDim2.new(0.5, 0, 1, -20), function()
+    frame:Destroy()
+    toggleButton:Destroy()
+end)
+closeButton.Size = UDim2.new(0.1, 0, 0.15)
+closeButton.BackgroundColor3 = Color3.fromRGB(150, 50, 50)
+closeButton.TextXAlignment = Enum.TextXAlignment.Center
+local isPanelOpen = false
+local function togglePanel()
+    if isPanelOpen then
+        TweenService:Create(frame, TweenInfo.new(0.75, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0,0,-1.5)}):Play()
+        TweenService:Create(toggleButton, TweenInfo.new(1.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0.35,0,-0.15)}):Play()
+    else
+        TweenService:Create(frame, TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Position = UDim2.new(0, 0, 0)}):Play()
+        TweenService:Create(toggleButton, TweenInfo.new(1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Position = UDim2.new(0.35,0,0.415)}):Play()
+    end
+    isPanelOpen = not isPanelOpen
+end
+
+toggleButton.MouseButton1Click:Connect(togglePanel)
+
+local isDragging = false
+local startPosition, startOffset
+
+toggleButton.MouseButton1Down:Connect(function()
+    isDragging = true
+    startPosition = UserInputService:GetMouseLocation()
+    startOffset = toggleButton.Position
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        isDragging = false
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if isDragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+        local delta = UserInputService:GetMouseLocation() - startPosition
+        toggleButton.Position = UDim2.new(startOffset.X.Scale, startOffset.X.Offset + delta.X, startOffset.Y.Scale, startOffset.Y.Offset + delta.Y)
+    end
+end)
+local cone = Instance.new("UICorner")
+cone.Parent = executeButton
+local cone = Instance.new("UICorner")
+cone.Parent = copyButton
+local cone = Instance.new("UICorner")
+cone.Parent = pasteButton
+local cone = Instance.new("UICorner")
+cone.Parent = clearButton
+local cone = Instance.new("UICorner")
+cone.Parent = closeButton
