@@ -381,3 +381,12 @@ end
 
 Button("Loadstring", "Loadstring", UDim2.new(0.025, 0, 0.27, 0), 'loadstring(game:HttpGet(""))()')
 Button("InvisibleSymbole", "Invisible Symbole", UDim2.new(0.525, 0, 0.27, 0), "ㅤ")
+local originalSize = toggleButton.Size
+
+toggleButton.MouseButton1Down:Connect(function()
+  toggleButton.Size = originalSize * 2
+end)
+
+toggleButton.MouseButton1Up:Connect(function()
+  toggleButton.Size = originalSize
+end)
