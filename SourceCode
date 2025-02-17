@@ -452,8 +452,8 @@ end)
 local transparencyLabel = Instance.new("TextLabel")
 transparencyLabel.Parent = sett
 transparencyLabel.Font = Enum.Font.SourceSans
-transparencyLabel.Size = UDim2.new(0.9, 0, 0.35, 0)
-transparencyLabel.Position = UDim2.new(0.05, 0, 0.45, 0)
+transparencyLabel.Size = UDim2.new(0.9, 0, 0.15, 0)
+transparencyLabel.Position = UDim2.new(0.05, 0, 0.35, 0)
 transparencyLabel.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
 transparencyLabel.BorderSizePixel = 0
 transparencyLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
