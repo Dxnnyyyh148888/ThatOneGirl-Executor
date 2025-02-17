@@ -409,7 +409,8 @@ toggleButton.MouseButton1Up:Connect(function()
 end)
 local si = Instance.new("TextLabel")
 si.Parent = sett
-si.Text = "Options"
+si.Text = " Options"
+si.BorderSizePixel = 0
 si.TextColor3 = Color3.fromRGB(255,255,255)
 si.TextScaled = true
 si.Size = UDim2.new(1,0,0.1)
@@ -420,7 +421,7 @@ local te = Instance.new("TextLabel")
 te.Parent = sett
 te.Font = Enum.Font.SourceSans
 te.Size = UDim2.new(0.9, 0, 0.15, 0)
-te.Position = UDim2.new(0.05, 0, 0.25, 0)
+te.Position = UDim2.new(0.05, 0, 0.15, 0)
 te.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
 te.BorderSizePixel = 0
 te.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -445,6 +446,38 @@ sizebox.FocusLost:Connect(function(enterPressed)
         else
             sizebox.Text = ""
             sizebox.PlaceholderText = "Invalid size"
+        end
+    end
+end)
+local transparencyLabel = Instance.new("TextLabel")
+transparencyLabel.Parent = sett
+transparencyLabel.Font = Enum.Font.SourceSans
+transparencyLabel.Size = UDim2.new(0.9, 0, 0.35, 0)
+transparencyLabel.Position = UDim2.new(0.05, 0, 0.45, 0)
+transparencyLabel.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+transparencyLabel.BorderSizePixel = 0
+transparencyLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+transparencyLabel.TextSize = 15
+transparencyLabel.Text = "stick Transparency"
+transparencyLabel.TextXAlignment = Enum.TextXAlignment.Left
+local transparencyBox = Instance.new("TextBox")
+transparencyBox.Parent = transparencyLabel
+transparencyBox.Text = "0.8"
+transparencyBox.Size = UDim2.new(0.4, 0, 0.9, 0)
+transparencyBox.Position = UDim2.new(0.55, 0, 0.05, 0)
+transparencyBox.PlaceholderText = "0 to 1"
+transparencyBox.TextColor3 = Color3.fromRGB(200, 200, 200)
+transparencyBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+transparencyBox.BorderSizePixel = 0
+transparencyBox.TextSize = 13
+transparencyBox.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local newTransparency = tonumber(transparencyBox.Text)
+        if newTransparency and newTransparency >= 0 and newTransparency <= 1 then
+            toggleButton.BackgroundTransparency = newTransparency
+        else
+            transparencyBox.Text = ""
+            transparencyBox.PlaceholderText = "Invalid value"
         end
     end
 end)
