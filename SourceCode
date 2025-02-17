@@ -187,19 +187,7 @@ opf.Position = UDim2.new(0.3,0,0.6)
 opf.BackgroundColor3 = Color3.fromRGB(40,40,40)
 opf.Parent = gui
 opf.Visible = false
-options.MouseButton1Click:Connect(function()
-if opf.Visible == false then
-    opf.Visible = true
-    opf.Size = UDim2.new(0.4,0,0)
-    local ios = game:GetService("TweenService")
-    local ggoal = UDim2.new(0.4,0,0.4)
-    local ifa = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
-    local koak = ios:Create(opf,ifa,{Size = ggoal})
-    koak:Play()
-  else
-    opf.Visible = false
-  end
-end)
+
 local gm = Instance.new("TextButton")
 gm.Parent = opf
 gm.Size = UDim2.new(0.3,0,0.3)
@@ -288,7 +276,7 @@ tg.Position = UDim2.new(0,0,0.75)
 tg.BackgroundColor3 = Color3.fromRGB(50,50,70)
 tg.BorderSizePixel = 0
 tg.TextSize = 12
-tg.Text = "Telegram:"
+tg.Text = "ㅤTelegram:"
 tg.TextXAlignment = Enum.TextXAlignment.Left
 tg.TextColor3 = Color3.fromRGB(255,255,255)
 local cb = Instance.new("TextButton")
@@ -305,6 +293,7 @@ cb.MouseButton1Click:Connect(function()
 setclipboard("T.me/Dxnnylol")
 end)
 info.MouseButton1Click:Connect(function()
+opf.Visible = false
 if ifes.Visible == false then
     ifes.Visible = true
     ifes.Size = UDim2.new(0.4,0,0)
@@ -314,6 +303,21 @@ if ifes.Visible == false then
     o:Play()
   else
     ifes.Visible = false
+  end
+end)
+wait(0.1)
+options.MouseButton1Click:Connect(function()
+ifes.Visible = false
+if opf.Visible == false then
+    opf.Visible = true
+    opf.Size = UDim2.new(0.4,0,0)
+    local ios = game:GetService("TweenService")
+    local ggoal = UDim2.new(0.4,0,0.4)
+    local ifa = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
+    local koak = ios:Create(opf,ifa,{Size = ggoal})
+    koak:Play()
+  else
+    opf.Visible = false
   end
 end)
 local function Button(name, text, position, path)
