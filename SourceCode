@@ -159,10 +159,6 @@ UserInputService.InputChanged:Connect(function(input)
         toggleButton.Position = UDim2.new(startOffset.X.Scale, startOffset.X.Offset + delta.X, startOffset.Y.Scale, startOffset.Y.Offset + delta.Y)
     end
 end)
-local cone = Instance.new("UICorner")
-cone.Parent = pasteButton
-local cone = Instance.new("UICorner")
-cone.Parent = clearButton
 options.Size = UDim2.new(0.1,0,0.2)
 options.Position = UDim2.new(0.5,0,0)
 options.BackgroundColor3 = Color3.fromRGB(45,45,50)
@@ -182,7 +178,7 @@ info.TextScaled = true
 info.TextColor3 = Color3.fromRGB(255,255,255)
 info.BackgroundColor3 = Color3.fromRGB(45,45,50)
 local sets = Instance.new("TextButton")
-sets.Parent = main
+sets.Parent = frame
 sets.Size = UDim2.new(0.1,0,0.2)
 sets.Position = UDim2.new(0.5,0,0.5)
 sets.Text = "📎"
@@ -276,7 +272,7 @@ infos.Position = UDim2.new(0.025,0,0.16)
 infos.BackgroundColor3 = Color3.fromRGB(50,50,55)
 infos.TextScaled = true
 infos.TextColor3 = Color3.fromRGB(200,200,200)
-infos.Text = "Executor/CodeLauncher/ScriptTester a project by Dxnny. An executor with too much settings that makes developers write easier, started:08/2024 remaked:02/2024 ended:never"
+infos.Text = "Executor/CodeLauncher/ScriptTester a project by Dxnny. An executor with too much settings that makes developers write easier, started:08/2024 remaked:02/2025 ended:never"
 local tg = Instance.new("TextLabel")
 tg.Parent = ifes
 tg.Size = UDim2.new(1,0,0.25)
@@ -347,10 +343,10 @@ local function Button(name, text, position, path)
     return button
 end
 
-Button("Humanoid", "Humanoid", UDim2.new(0.025, 0, 0.07, 0), "local humanoid = game.Players.LocalPlayer.Character.Humanoid")
-Button("HumanoidRootPart", "HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
-Button("LocalPlayer", "LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player = game.Players.LocalPlayer")
-Button("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
+Button("Humanoid", "get Humanoid", UDim2.new(0.025, 0, 0.07, 0), "local humanoid = game.Players.LocalPlayer.Character.Humanoid")
+Button("HumanoidRootPart", "get HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
+Button("LocalPlayer", "get LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player = game.Players.LocalPlayer")
+Button("PlayerGui", "get PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
 local co = Instance.new("TextLabel")
 co.Parent = scrl
 co.Size = UDim2.new(1, 0, 0.05, 0)
