@@ -280,7 +280,7 @@ local sett = Instance.new("Frame")
 sett.Parent = gui
 sett.Visible = false
 sett.Size = UDim2.new(0.3,0,0.5)
-sett.Position = UDim2.new(0,0,0.5)
+sett.Position = UDim2.new(0,0,0.4)
 sett.BackgroundColor3 = Color3.fromRGB(40,40,40)
 sett.BorderSizePixel = 0
 tg.Parent = ifes
@@ -397,7 +397,7 @@ if sett.Visible == false then
     sett.Size = UDim2.new(0.3,0,0)
     local p = game:GetService("TweenService")
     local ifg = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
-    local h = p:Create(sett,ifg,{Size = UDim2.new(0.3,0,0.5)})
+    local h = p:Create(sett,ifg,{Size = UDim2.new(0.3,0,0.6)})
     h:Play()
   else
     sett.Visible = false
