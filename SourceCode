@@ -346,7 +346,7 @@ Button("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui 
 local co = Instance.new("TextLabel")
 co.Parent = scrl
 co.Size = UDim2.new(1, 0, 0.05, 0)
-co.Position = UDim2.new(0, 0, 0.15, 0)
+co.Position = UDim2.new(0, 0, 0.20, 0)
 co.BackgroundColor3 = Color3.fromRGB(50, 50, 55)
 co.Text = "Paste and Make"
 co.TextScaled = true
@@ -372,5 +372,5 @@ local function Button(name, text, position, value)
     return button
 end
 
-Button("Loadstring", "Loadstring", UDim2.new(0.025, 0, 0.22, 0), 'loadstring(game:HttpGet(""))()')
-Button("InvisibleSymbole", "Invisible Symbole", UDim2.new(0.525, 0, 0.22, 0), "ㅤ")
+Button("Loadstring", "Loadstring", UDim2.new(0.025, 0, 0.27, 0), 'loadstring(game:HttpGet(""))()')
+Button("InvisibleSymbole", "Invisible Symbole", UDim2.new(0.525, 0, 0.27, 0), "ㅤ")
