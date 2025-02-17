@@ -410,13 +410,13 @@ end)
 local te = Instance.new("TextLabel")
 te.Parent = sett
 te.Font = Enum.Font.SourceSans
-te.Size = UDim2.new(0.9, 0, 0.25, 0)
+te.Size = UDim2.new(0.9, 0, 0.2, 0)
 te.Position = UDim2.new(0.05, 0, 0.25, 0)
 te.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
 te.BorderSizePixel = 0
 te.TextColor3 = Color3.fromRGB(255, 255, 255)
-te.TextSize = 12
-te.Text = "TextSize:"
+te.TextScaled = true
+te.Text = "ㅤTextSize:"
 te.TextXAlignment = Enum.TextXAlignment.Left
 local sizebox = Instance.new("TextBox")
 sizebox.Parent = te
@@ -426,7 +426,7 @@ sizebox.PlaceholderText = "size"
 sizebox.TextColor3 = Color3.fromRGB(200, 200, 200)
 sizebox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 sizebox.BorderSizePixel = 0
-sizebox.TextScaled = true
+sizebox.TextSize = 13
 sizebox.FocusLost:Connect(function(enterPressed)
     if enterPressed then
         local newSize = tonumber(sizebox.Text)
