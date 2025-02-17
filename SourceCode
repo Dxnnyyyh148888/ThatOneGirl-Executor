@@ -389,7 +389,7 @@ end
 Button("Loadstring", "Loadstring", UDim2.new(0.025, 0, 0.27, 0), 'loadstring(game:HttpGet(""))()')
 Button("InvisibleSymbole", "Invisible Symbole", UDim2.new(0.525, 0, 0.27, 0), "ㅤ")
 toggleButton.MouseButton1Down:Connect(function()
-  toggleButton.Size = UDim2.new(0.4,0,0.04)
+  toggleButton.Size = UDim2.new(0.4,0,0.03)
 end)
 sets.MouseButton1Click:Connect(function()
 if sett.Visible == false then
@@ -410,7 +410,7 @@ end)
 local te = Instance.new("TextLabel")
 te.Parent = sett
 te.Font = Enum.Font.SourceSans
-te.Size = UDim.2.new(0.9,0,0.25)
+te.Size = UDim2.new(0.9,0,0.25)
 te.Position = UDim2.new(0.05,0,0.25)
 te.BackgroundColor3 = Color3.fromRGB(45,45,50)
 te.BorderSizePixel = 0
