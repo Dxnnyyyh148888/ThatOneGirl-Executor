@@ -276,6 +276,13 @@ infos.TextScaled = true
 infos.TextColor3 = Color3.fromRGB(200,200,200)
 infos.Text = "Executor/CodeLauncher/ScriptTester a project by Dxnny. An executor with too much settings that makes developers write easier, started:08/2024 remaked:02/2025 ended:never"
 local tg = Instance.new("TextLabel")
+local sett = instance.new("Frame")
+sett.Parent = gui
+sett.Visible = false
+sett.Size = UDim2.new(0.3,0,0.5)
+sett.Position = UDim2.new(0,0,0.5)
+sett.BackgroundColor3 = Color3.fromRGB(40,40,40)
+sett.BorderSizePixel = 0
 tg.Parent = ifes
 tg.Size = UDim2.new(1,0,0.25)
 tg.Position = UDim2.new(0,0,0.75)
@@ -385,6 +392,18 @@ local originalSize = toggleButton.Size
 
 toggleButton.MouseButton1Down:Connect(function()
   toggleButton.Size = originalSize * 2
+end)
+sets.MouseButton1Click:Connect(function()
+if sett.Visible == false then
+    sett.Visible = true
+    sett.Size = UDim2.new(0.3,0,0)
+    local p = game:GetService("TweenService")
+    local ifg = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
+    local h = p:Create(sett,ifg{Size = UDim2.new(0.3,0,0.5)})
+    h:Play()
+  else
+    sett.Visible = false
+  end
 end)
 
 toggleButton.MouseButton1Up:Connect(function()
