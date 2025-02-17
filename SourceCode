@@ -343,3 +343,13 @@ Button("Humanoid", "Humanoid", UDim2.new(0.025, 0, 0.07, 0), "local humanoid = g
 Button("HumanoidRootPart", "HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
 Button("LocalPlayer", "LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player = game.Players.LocalPlayer")
 Button("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
+local co = Instance.new("TextLabel")
+co.Parent = scrl
+co.Size = UDim2.new(1,0,0.05)
+co.Position = UDim2.new(0,0,0.15)
+co.BackgroundColor3 = Color3.fromRGB(50,50,55)
+co.Text = "Paste and Make"
+co.TextScaled = true
+co.TextColor3 = Color3.fromRGB(255,255,255)
+Button("Loadstring", "Loadstring", UDim2.new(0.025,0,0.22), "loadstring(game:HttpGet(""))()"
+Button("InvisibleSymbole", "Invisible Symbole" UDim2.new(0.525,0,0.22), "ㅤ")
