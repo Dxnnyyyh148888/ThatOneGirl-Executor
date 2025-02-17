@@ -345,11 +345,32 @@ Button("LocalPlayer", "LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player
 Button("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
 local co = Instance.new("TextLabel")
 co.Parent = scrl
-co.Size = UDim2.new(1,0,0.05)
-co.Position = UDim2.new(0,0,0.15)
-co.BackgroundColor3 = Color3.fromRGB(50,50,55)
+co.Size = UDim2.new(1, 0, 0.05, 0)
+co.Position = UDim2.new(0, 0, 0.15, 0)
+co.BackgroundColor3 = Color3.fromRGB(50, 50, 55)
 co.Text = "Paste and Make"
 co.TextScaled = true
-co.TextColor3 = Color3.fromRGB(255,255,255)
-Button("Loadstring", "Loadstring", UDim2.new(0.025,0,0.22), 'loadstring(game:HttpGet(""))()')
-Button("InvisibleSymbole", "Invisible Symbole" UDim2.new(0.525,0,0.22), "ㅤ")
+co.TextColor3 = Color3.fromRGB(255, 255, 255)
+co.TextXAlignment = Enum.TextXAlignment.Center
+
+local function Button(name, text, position, value)
+    local button = Instance.new("TextButton")
+    button.Parent = scrl
+    button.Size = UDim2.new(0.45, 0, 0.05, 0)
+    button.Position = position
+    button.Text = text
+    button.BackgroundColor3 = Color3.fromRGB(80, 120, 160)
+    button.BorderSizePixel = 0
+    button.Font = Enum.Font.SourceSans
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.TextScaled = true
+
+    button.MouseButton1Click:Connect(function()
+        textBox.Text = textBox.Text .. value
+    end)
+
+    return button
+end
+
+Button("Loadstring", "Loadstring", UDim2.new(0.025, 0, 0.22, 0), 'loadstring(game:HttpGet(""))()')
+Button("InvisibleSymbole", "Invisible Symbole", UDim2.new(0.525, 0, 0.22, 0), "ㅤ")
