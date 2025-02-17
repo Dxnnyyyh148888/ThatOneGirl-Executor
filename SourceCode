@@ -351,5 +351,5 @@ co.BackgroundColor3 = Color3.fromRGB(50,50,55)
 co.Text = "Paste and Make"
 co.TextScaled = true
 co.TextColor3 = Color3.fromRGB(255,255,255)
-Button("Loadstring", "Loadstring", UDim2.new(0.025,0,0.22), "loadstring(game:HttpGet(""))()")
+Button("Loadstring", "Loadstring", UDim2.new(0.025,0,0.22), 'loadstring(game:HttpGet(""))()')
 Button("InvisibleSymbole", "Invisible Symbole" UDim2.new(0.525,0,0.22), "ㅤ")
