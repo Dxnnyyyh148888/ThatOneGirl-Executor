@@ -397,7 +397,7 @@ if sett.Visible == false then
     sett.Size = UDim2.new(0.3,0,0)
     local p = game:GetService("TweenService")
     local ifg = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
-    local h = p:Create(sett,ifg{Size = UDim2.new(0.3,0,0.5)})
+    local h = p:Create(sett,ifg,{Size = UDim2.new(0.3,0,0.5)})
     h:Play()
   else
     sett.Visible = false
