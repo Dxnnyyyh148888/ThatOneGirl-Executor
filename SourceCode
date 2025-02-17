@@ -407,37 +407,12 @@ end)
 toggleButton.MouseButton1Up:Connect(function()
   toggleButton.Size = UDim2.new(0.3,0,0.03)
 end)
-local textSizeSlider = Instance.new("TextButton")
-textSizeSlider.Parent = sett
-textSizeSlider.Size = UDim2.new(0.8, 0, 0.1, 0)
-textSizeSlider.Position = UDim2.new(0.1, 0, 0.1, 0)
-textSizeSlider.Text = "Text Size: " .. textBox.TextSize
-textSizeSlider.BackgroundColor3 = Color3.fromRGB(80, 120, 160)
-textSizeSlider.BorderSizePixel = 0
-textSizeSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
-textSizeSlider.TextScaled = true
-
-textSizeSlider.MouseButton1Click:Connect(function()
-    local newSize = tonumber(textBox.Text)
-    if newSize and newSize > 0 then
-        textBox.TextSize = newSize
-        textSizeSlider.Text = "Text Size: " .. newSize
-    end
-end)
-local transparencySlider = Instance.new("TextButton")
-transparencySlider.Parent = sett
-transparencySlider.Size = UDim2.new(0.8, 0, 0.1, 0)
-transparencySlider.Position = UDim2.new(0.1, 0, 0.25, 0)
-transparencySlider.Text = "Transparency: " .. toggleButton.BackgroundTransparency
-transparencySlider.BackgroundColor3 = Color3.fromRGB(80, 120, 160)
-transparencySlider.BorderSizePixel = 0
-transparencySlider.TextColor3 = Color3.fromRGB(255, 255, 255)
-transparencySlider.TextScaled = true
-transparencySlider.MouseButton1Click:Connect(function()
-    local newTransparency = tonumber(textBox.Text)
-    if newTransparency and newTransparency >= 0 and newTransparency <= 1 then
-        toggleButton.BackgroundTransparency = newTransparency
-        transparencySlider.Text = "Transparency: " .. newTransparency
-    end
-end)
-print("end")
+local te = Instance.new("TextLabel")
+te.Parent = sett
+te.Font = Enum.Font.SourceSans
+te.Size = UDim.2.new(0.9,0,0.25)
+te.Position = UDim2.new(0.05,0,0.25)
+te.BackgroundColor3 = Color3.fromRGB(45,45,50)
+te.BorderSizePixel = 0
+te.TextColor3 = Color3.fromRGB(255,255,255)
+te.TextSize = 12
