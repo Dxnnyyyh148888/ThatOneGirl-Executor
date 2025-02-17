@@ -255,8 +255,54 @@ title.TextScaled = true
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.BackgroundTransparency = 1
 title.TextXAlignment = Enum.TextXAlignment.Center
-
-local function createPathButton(name, text, position, path)
+local ifes = Instance.new("Frame")
+ifes.Parent = gui
+ifes.Size = UDim2.new(0.4,0,0.4)
+ifes.Position = UDim2.new(0.3,0,0.6)
+ifes.BackgroundColor3 = Color3.fromRGB(40,40,40)
+ifes.BorderSizePixel = 0
+local label = Instance.new("TextLabel")
+label.Parent = ifes
+label.Size = UDim2.new(1,0,0.15)
+label.BackgroundColor3 = Color3.fromRGB(80, 120, 160)
+label.Text = " About Executor"
+label.TextScaled = true
+label.TextXAlignment = Enum.TextXAlignment.Left
+label.Font = Enum.Font.SourceSans
+label.TextColor3 = Color3.FromRGB(255,255,255)
+local infos = Instance.new("TextLabel")
+infos.Parent = ifes
+infos.BorderSizePixel = 0
+infos.Size = UDim2.new(0.95,0,0.6)
+infos.Position = UDim2.new(0.025,0,0.16)
+infos.BackgroundColor3 = Color3.fromRGB(50,50,55)
+infos.TextScaled = true
+infos.TextColor3 = Color3.fromRGB(200,200,200)
+infos.Text = "Executor/CodeLauncher/ScriptTester a project by Dxnny. An executor with too much settings that makes developers write easier, started:08/2024 remaked:02/2024 ended:never"
+local tg = Instance.new("TextLabel")
+tg.Parent = ifes
+tg.Size = UDim2.new(1,0,0.25)
+tg.Position = UDim2.new(0,0,0.75)
+tg.BackgroundColor3 = Color3.fromRGB(50,50,70)
+tg.BorderSizePixel = 0
+tg.TextScaled = true
+tg.Text = "More Scripts in Telegram:"
+tg.TextXAlignment = Enum.TextXAlignment.Left
+tg.TextColor3 = Color3.fromRGB(255,255,255)
+local cb = Instance.new("TextButton")
+cb.Parent = tg
+cb.Size = UDim2.new(0.25,0,1)
+cb.Position = UDim2.new(0.75,0,0)
+cb.BackgroundColor3 = Color3.fromRGB(60,60,80)
+cb.BorderSizePixel = 0
+cb.Text = "Copy"
+cb.TextScaled = true
+cb.Font = Enum.Font.SourceSans
+cb.TextColor3 = Color3.fromRGB(255,255,255)
+cb.MouseButton1Click:Connect(function()
+setclipboard("T.me/Dxnnylol")
+end)
+local function Button(name, text, position, path)
     local button = Instance.new("TextButton")
     button.Parent = scrl
     button.Size = UDim2.new(0.45, 0, 0.05, 0)
@@ -275,7 +321,7 @@ local function createPathButton(name, text, position, path)
     return button
 end
 
-createPathButton("Humanoid", "Humanoid", UDim2.new(0.025, 0, 0.07, 0), "local humanoid = game.Players.LocalPlayer.Character.Humanoid")
-createPathButton("HumanoidRootPart", "HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
-createPathButton("LocalPlayer", "LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player = game.Players.LocalPlayer")
-createPathButton("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
+Button("Humanoid", "Humanoid", UDim2.new(0.025, 0, 0.07, 0), "local humanoid = game.Players.LocalPlayer.Character.Humanoid")
+Button("HumanoidRootPart", "HumanoidRootPart", UDim2.new(0.525, 0, 0.07, 0), "local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart")
+Button("LocalPlayer", "LocalPlayer", UDim2.new(0.025, 0, 0.13, 0), "local player = game.Players.LocalPlayer")
+Button("PlayerGui", "PlayerGui", UDim2.new(0.525, 0, 0.13, 0), "local playergui = game.Players.LocalPlayer.PlayerGui")
