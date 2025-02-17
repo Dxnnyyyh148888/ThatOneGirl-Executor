@@ -407,10 +407,19 @@ end)
 toggleButton.MouseButton1Up:Connect(function()
   toggleButton.Size = UDim2.new(0.3,0,0.03)
 end)
+local si = Instance.new("TextLabel")
+si.Parent = sett
+si.Text = "Options"
+si.TextColor3 = Color3.fromRGB(255,255,255)
+si.TextScaled = true
+si.Size = UDim2.new(1,0,0.1)
+si.Font = Enum.Font.SourceSans
+si.TextXAlignment = Enum.TextXAlignment.Left
+si.BackgroundColor3 = Color3.fromRGB(80,120,160)
 local te = Instance.new("TextLabel")
 te.Parent = sett
 te.Font = Enum.Font.SourceSans
-te.Size = UDim2.new(0.9, 0, 0.2, 0)
+te.Size = UDim2.new(0.9, 0, 0.15, 0)
 te.Position = UDim2.new(0.05, 0, 0.25, 0)
 te.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
 te.BorderSizePixel = 0
