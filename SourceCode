@@ -349,6 +349,7 @@ co.Size = UDim2.new(1, 0, 0.05, 0)
 co.Position = UDim2.new(0, 0, 0.20, 0)
 co.BackgroundColor3 = Color3.fromRGB(50, 50, 55)
 co.Text = "Paste and Make"
+co.BorderSizePixel = 0
 co.TextScaled = true
 co.TextColor3 = Color3.fromRGB(255, 255, 255)
 co.TextXAlignment = Enum.TextXAlignment.Center
