@@ -389,9 +389,6 @@ end
 
 Button("Loadstring", "Loadstring", UDim2.new(0.025, 0, 0.27, 0), 'loadstring(game:HttpGet(""))()')
 Button("InvisibleSymbole", "Invisible Symbole", UDim2.new(0.525, 0, 0.27, 0), "ㅤ")
-toggleButton.MouseButton1Down:Connect(function()
-  TweenService:Create(toggleButton, TweenInfo.new(1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0.3,0,0.04)}):Play()
-end)
 sets.MouseButton1Click:Connect(function()
 if sett.Visible == false then
     sett.Visible = true
@@ -403,10 +400,6 @@ if sett.Visible == false then
   else
     sett.Visible = false
   end
-end)
-
-toggleButton.MouseButton1Up:Connect(function()
-  toggleButton.Size = UDim2.new(0.3,0,0.03)
 end)
 local si = Instance.new("TextLabel")
 si.Parent = sett
