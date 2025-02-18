@@ -478,7 +478,7 @@ end)
 local consoleButton = Instance.new("TextButton")
 consoleButton.Parent = sett
 consoleButton.Size = UDim2.new(0.3, 0, 0.15, 0)
-consoleButton.Position = UDim2.new(0.02, 0, 0.68, 0)
+consoleButton.Position = UDim2.new(0.02, 0, 0.83, 0)
 consoleButton.Text = "Open Console"
 consoleButton.BackgroundColor3 = Color3.fromRGB(50,50,60)
 consoleButton.BorderSizePixel = 0
