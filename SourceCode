@@ -477,7 +477,7 @@ transparencyBox.FocusLost:Connect(function(enterPressed)
 end)
 local consoleButton = Instance.new("TextButton")
 consoleButton.Parent = sett
-consoleButton.Size = UDim2.new(0.3, 0, 0.3, 0)
+consoleButton.Size = UDim2.new(0.3, 0, 0.15, 0)
 consoleButton.Position = UDim2.new(0.02, 0, 0.68, 0)
 consoleButton.Text = "Open Console"
 consoleButton.BackgroundColor3 = Color3.fromRGB(50,50,60)
@@ -485,5 +485,5 @@ consoleButton.BorderSizePixel = 0
 consoleButton.TextColor3 = Color3.new(1, 1, 1)
 consoleButton.TextScaled = true
 consoleButton.MouseButton1Click:Connect(function()
-    consolePanel.Visible = not consolePanel.Visible
+    game:GetService("StarterGui"):SetCore("DevConsoleVisible", true)
 end)
