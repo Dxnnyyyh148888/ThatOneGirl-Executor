@@ -54,6 +54,7 @@ wait(0.2)
 toggleButton.Text = " "
 local textBox = Instance.new("TextBox")
 textBox.Parent = frame
+textBox.Active = true
 textBox.Size = UDim2.new(0.5, 0, 1, 0)
 textBox.Position = UDim2.new(0, 0, 0, 0)
 textBox.PlaceholderText = "Your Code Here! made by Dxnny(T.me/Dxnnylol)"
@@ -64,6 +65,7 @@ textBox.BackgroundColor3 = Color3.fromRGB(50, 50, 60)
 textBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 textBox.BorderSizePixel = 0
 textBox.ClearTextOnFocus = false
+textBox.Draggable = false
 textBox.TextWrapped = true
 textBox.TextScaled = false
 textBox.TextYAlignment = Enum.TextYAlignment.Top
@@ -486,4 +488,30 @@ consoleButton.TextColor3 = Color3.new(1, 1, 1)
 consoleButton.TextScaled = true
 consoleButton.MouseButton1Click:Connect(function()
     game:GetService("StarterGui"):SetCore("DevConsoleVisible", true)
+end)
+local drag = Instance.new("TextLabel")
+drag.Parent = sett
+drag.Size = UDim2.new(0.9,0,0.15)
+drag.Position = UDim2.new(0.05,0,0.55)
+drag.BackgroundColor3 = Color3.fromRGB(45,45,50)
+drag.BorderSizePixel = 0
+drag.Text = " CodeBoxDrag"
+drag.TextSize = 15
+drag.TextXAlignment = Enum.TextXAlignment.Left
+drag.TextColor3 = Color3.fromRGB(255,255,255)
+Local d = Instance.new("TextButton")
+d.Size = UDim2.new(0.15,0,0.9)
+d.Position = UDim2.new(0.8,0,0.05)
+d.BackgroundColor3 = Color3.fromRGB(150,0,0)
+d.Text = " "
+d.Parent = drag
+d.MouseButton1Click:Connect(function()
+if textBox.Draggable == false then
+    textBox.Draggable = true
+    d.BackgroundColor3 = Color3.fromRGB(0,150,0)
+  else
+    textBox.Draggable = false
+    d.BackgroundColor3 = Color3.fromRGB(150,0,0)
+    textBox.Position = UDim2.new(0,0,0)
+  end
 end)
