@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
-
+print("Starting executing")
 local gui = Instance.new("ScreenGui")
 gui.Parent = game:GetService("CoreGui")
 local options = Instance.new("TextButton")
@@ -499,7 +499,7 @@ drag.Text = " CodeBoxDrag"
 drag.TextSize = 15
 drag.TextXAlignment = Enum.TextXAlignment.Left
 drag.TextColor3 = Color3.fromRGB(255,255,255)
-Local d = Instance.new("TextButton")
+local d = Instance.new("TextButton")
 d.Size = UDim2.new(0.15,0,0.9)
 d.Position = UDim2.new(0.8,0,0.05)
 d.BackgroundColor3 = Color3.fromRGB(150,0,0)
@@ -515,3 +515,4 @@ if textBox.Draggable == false then
     textBox.Position = UDim2.new(0,0,0)
   end
 end)
+print("ended")
