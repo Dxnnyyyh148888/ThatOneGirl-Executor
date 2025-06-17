@@ -24,7 +24,7 @@ toggleButton.Active = true
 toggleButton.Draggable = true
 toggleButton.Size = UDim2.new(0,0,0.03)
 toggleButton.Position = UDim2.new(0.5,0,0.2)
-toggleButton.Text = "JoinUs! T.me/Dxnnylol!"
+toggleButton.Text = "Better with me"
 toggleButton.BackgroundColor3 = Color3.fromRGB(255,255,255)
 toggleButton.BackgroundTransparency = 0.8
 toggleButton.BorderSizePixel = 0
@@ -47,9 +47,9 @@ local gooal = UDim2.new(0.35, 0,0)
 local ifoo = TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
 local kaki = jje:Create(toggleButton,ifoo, {Position = gooal})
 kaki:Play()
-toggleButton.Text = "JoinUs!"
+toggleButton.Text = "Better with"
 wait(0.2)
-toggleButton.Text = "Join"
+toggleButton.Text = "Better"
 wait(0.2)
 toggleButton.Text = " "
 local textBox = Instance.new("TextBox")
@@ -277,7 +277,9 @@ infos.Position = UDim2.new(0.025,0,0.16)
 infos.BackgroundColor3 = Color3.fromRGB(50,50,55)
 infos.TextScaled = true
 infos.TextColor3 = Color3.fromRGB(200,200,200)
-infos.Text = "Executor/CodeLauncher/ScriptTester a project by Dxnny. An executor with too much settings that makes developers write easier, started:08/2024 remaked:02/2025 ended:never"
+infos.Text = [[started:08/2024
+remaked:02/2025
+ended:never]]
 local tg = Instance.new("TextLabel")
 local sett = Instance.new("Frame")
 sett.Parent = gui
@@ -292,7 +294,7 @@ tg.Position = UDim2.new(0,0,0.75)
 tg.BackgroundColor3 = Color3.fromRGB(50,50,70)
 tg.BorderSizePixel = 0
 tg.TextSize = 12
-tg.Text = "ㅤTelegram:"
+tg.Text = "ㅤContact:"
 tg.TextXAlignment = Enum.TextXAlignment.Left
 tg.TextColor3 = Color3.fromRGB(255,255,255)
 local cb = Instance.new("TextButton")
@@ -306,7 +308,7 @@ cb.TextScaled = true
 cb.Font = Enum.Font.SourceSans
 cb.TextColor3 = Color3.fromRGB(255,255,255)
 cb.MouseButton1Click:Connect(function()
-setclipboard("T.me/Dxnnylol")
+setclipboard("T.me/danyyya99")
 end)
 info.MouseButton1Click:Connect(function()
 opf.Visible = false
@@ -515,4 +517,3 @@ if textBox.Draggable == false then
     textBox.Position = UDim2.new(0,0,0)
   end
 end)
-print("ended")
